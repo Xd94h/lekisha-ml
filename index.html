@@ -49,7 +49,7 @@ button{transition:transform .15s}button:hover:not(:disabled){transform:translate
 .bg span{position:absolute;bottom:-40px;font-size:22px;opacity:.5;animation:rise linear infinite}
 @keyframes rise{to{transform:translateY(-115vh) rotate(40deg)}}
 #app{position:relative;z-index:1}
-.final::after{content:"🎀";position:absolute;top:8px;left:12px;font-size:34px}
+.final::after{content:"";position:absolute;top:8px;left:12px;font-size:34px}
 </style></head><body><div id="app"></div>
 <script>
 /* ===== QUESTION BANK (answer key lives here, never random) ===== */
@@ -115,7 +115,7 @@ function exam(){if(!S||S.done){return go(S&&S.done?"result":"home")}
  const opts=q.options.map((o,i)=>{let c="opt";if(a!==undefined){if(i===q.correctIndex)c+=" ok";else if(i===a)c+=" bad";if(i===a)c+=" pick"}
   return `<button class="${c}" ${a!==undefined?"disabled":""} onclick="pick(${i})"><span class="L">${"ABCD"[i]}</span>${esc(o)}</button>`}).join("");
  let fb="";if(a!==undefined){const ok=a===q.correctIndex;fb=ok?`<div class="fb ok"><h3><span class="pop">🧸</span> CORRECT! WELL DONE LEKISHA! 💚</h3><p><b>Correct answer:</b> ${"ABCD"[q.correctIndex]}. ${esc(q.correctAnswer)}</p><p>${esc(q.explanation)}</p><b>+2 marks 💗</b></div>`:`<div class="fb bad"><h3>OOPS! NOT QUITE RIGHT! 💗</h3><p><b>Correct answer:</b> ${"ABCD"[q.correctIndex]}. ${esc(q.correctAnswer)}</p><p>${esc(q.explanation)}</p><p>You chose ${"ABCD"[a]}, which is not correct here.</p><b>0 marks</b></div>`}
- app.innerHTML=`<div class="card"><div class="top"><span>🎀 ${S.cur+1}/${TOTAL}</span><span id="t">⏰ --:--</span></div><div class="bar"><i style="width:${done/TOTAL*100}%"></i></div>
+ app.innerHTML=`<div class="card"><div class="top"><span> ${S.cur+1}/${TOTAL}</span><span id="t">⏰ --:--</span></div><div class="bar"><i style="width:${done/TOTAL*100}%"></i></div>
  <p style="font-size:13px;margin:10px 0 0;color:var(--deep)"><b>${q.chapter}</b> · ${q.difficulty} · ${q.marks} marks</p><h3 style="line-height:1.5">${esc(q.question)}</h3>${opts}${fb}
  <div class="nav"><button class="alt" ${S.cur===0?"disabled":""} onclick="nav(-1)">← PREVIOUS</button>${S.cur<TOTAL-1?`<button onclick="nav(1)">NEXT QUESTION →</button>`:`<button onclick="finish()">SUBMIT EXAM 🎀</button>`}</div>
  <div class="grid">${grid}</div><p class="center"><button class="alt" onclick="finish()">Finish exam</button></p></div>`;
