@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<title>Lekisha’s Pink Exam Paradise 🎀</title>
+<style>
+:root{--bg:#ffe4ee;--card:#fff7fa;--pink:#ff8fb8;--deep:#e0558a;--choc:#5b3424;--cream:#fffaf0;--g:#d9f7e4;--gb:#2e9e5b;--r:#ffe0e0;--rb:#d64545;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#ffe4ee}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--choc);font-family:Georgia,"Trebuchet MS",serif;min-height:100vh}
+#app{max-width:760px;margin:0 auto;padding:18px}
+.card{background:var(--card);border-radius:24px;padding:22px;box-shadow:0 8px 24px #e0558a30;margin-bottom:16px;animation:pop .4s}
+@keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+h1{font-size:clamp(28px,7vw,44px);margin:6px 0;color:var(--deep);text-align:center}
+.sub{text-align:center;font-size:18px}.bear{font-size:90px;text-align:center;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.stat{background:#ffd3e4;border-radius:16px;padding:12px;text-align:center;font-weight:bold}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:12px 22px;background:var(--deep);color:#fff;font-weight:bold;box-shadow:0 4px 0 #b53d6b}
+button.alt{background:#fff;color:var(--deep);box-shadow:0 4px 0 #f3b3cd}
+button:disabled{opacity:.4;cursor:not-allowed}
+.center{text-align:center}.bar{height:12px;background:#ffd3e4;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#ff8fb8,#e0558a);transition:width .4s}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:bold}
+.opt{display:block;width:100%;text-align:left;background:#fff;color:var(--choc);border:2px solid #ffc2da;border-radius:16px;padding:14px;margin:10px 0;box-shadow:none;font-weight:normal}
+.opt:hover:not(:disabled){background:#ffeef5}.opt:disabled{opacity:1;cursor:default}
+.opt.ok{background:var(--g);border-color:var(--gb)}.opt.bad{background:var(--r);border-color:var(--rb)}.opt.pick{outline:3px solid var(--deep)}
+.fb{border-radius:18px;padding:16px;margin-top:12px;animation:pop .3s}.fb.ok{background:var(--g);border:2px solid var(--gb)}.fb.bad{background:var(--r);border:2px solid var(--rb)}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-top:14px;flex-wrap:wrap}
+.grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.grid b{width:32px;height:32px;border-radius:50%;background:#fff;border:2px solid #ffc2da;display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer}
+.grid b.ok{background:var(--gb);color:#fff}.grid b.bad{background:var(--rb);color:#fff}.grid b.cur{border-color:var(--choc)}
+.score{font-size:64px;font-weight:bold;color:var(--deep);text-align:center}
+.final{background:linear-gradient(135deg,#ffd3e4,#fff0f5);border:3px dashed var(--deep);text-align:center;font-size:19px;line-height:1.6;white-space:pre-line}
+.mist{background:#fff;border-radius:16px;padding:14px;margin:10px 0;border-left:6px solid var(--rb)}
+.fall{position:fixed;top:-30px;font-size:24px;animation:fall 4s linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.pop{display:inline-block;animation:bob .8s 2}
+
+body{font-family:Nunito,"Trebuchet MS",sans-serif;background:radial-gradient(circle at 20% 10%,#fff0f6 0,transparent 40%),radial-gradient(circle at 90% 80%,#ffd0e2 0,transparent 45%),#ffe4ee;background-attachment:fixed}
+h1{font-family:Pacifico,cursive;font-weight:normal;text-shadow:2px 2px 0 #fff}
+.card{position:relative;border:3px solid #fff;overflow:hidden}
+.card::before{content:"";position:absolute;top:-6px;right:-6px;width:70px;height:50px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70'><path d='M50 35C30 5 2 10 8 35 12 58 35 55 50 35Z' fill='%23ff8fb8' stroke='%23e0558a' stroke-width='4'/><path d='M50 35C70 5 98 10 92 35 88 58 65 55 50 35Z' fill='%23ff8fb8' stroke='%23e0558a' stroke-width='4'/><circle cx='50' cy='35' r='9' fill='%23e0558a'/></svg>") no-repeat center/contain;transform:rotate(15deg);opacity:.9;pointer-events:none}
+.bowbig{text-align:center;animation:bob 2.5s infinite;margin-bottom:-6px}
+button{transition:transform .15s}button:hover:not(:disabled){transform:translateY(-2px) scale(1.03)}button:active{transform:translateY(3px);box-shadow:none}
+.L{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#ffd3e4;color:var(--deep);font-weight:800;align-items:center;justify-content:center;margin-right:8px}
+.opt{font-size:16px;line-height:1.4}
+.opt.ok .L{background:var(--gb);color:#fff}.opt.bad .L{background:var(--rb);color:#fff}
+.stat{border:2px solid #fff;box-shadow:0 3px 8px #e0558a20}
+.bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg span{position:absolute;bottom:-40px;font-size:22px;opacity:.5;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(40deg)}}
+#app{position:relative;z-index:1}
+.final::after{content:"🎀";position:absolute;top:8px;left:12px;font-size:34px}
+</style></head><body><div id="app"></div>
+<script>
+/* ===== QUESTION BANK (answer key lives here, never random) ===== */
+const C1="Nationalism in India",C2="Print Culture and the Modern World";
+const AR=["Both A and R are true, and R explains A","Both A and R are true, but R does not explain A","A is true, R is false","A is false, R is true"];
+const RAW=[
+[C1,"Which statement about the Rowlatt Act (1919) is correct?",["It was passed after consulting the Indian members of the Imperial Legislative Council","It allowed detention of political prisoners without trial for two years","It was passed to implement the Simon Commission’s report","It was withdrawn immediately after Jallianwala Bagh"],1,"The Act was hurriedly passed by the Imperial Legislative Council despite unanimous opposition of its Indian members. It gave the government power to detain political prisoners without trial for two years. It was not withdrawn after the massacre."],
+[C1,"Which pairing of Gandhiji’s early satyagrahas is correct?",["Kheda (1917) – indigo planters; Champaran – mill workers","Champaran (1917) – peasants forced to grow indigo; Ahmedabad (1918) – cotton mill workers","Ahmedabad – crop failure and plague; Kheda – indigo","Champaran – revenue remission after crop failure; Kheda – mill workers"],1,"Champaran (1917): peasants oppressed by the plantation system. Kheda (1917): peasants of Gujarat demanding revenue relaxation after crop failure and plague. Ahmedabad (1918): cotton mill workers."],
+[C1,"What did General Dyer later say was his object at Jallianwala Bagh (13 April 1919)?",["To arrest Satya Pal and Saifuddin Kitchlew","To protect visitors of the Baisakhi fair","To produce a ‘moral effect’, creating terror and awe in the minds of satyagrahis","To enforce the Rowlatt Act in Amritsar"],2,"Dyer admitted he wanted to produce a moral effect and instil terror and awe. The crowd had gathered in an enclosed ground; he blocked the exit and ordered firing."],
+[C1,"Which session finally adopted the Non-Cooperation programme in December 1920, after a compromise at the earlier Calcutta session (September 1920)?",["Lahore","Madras","Karachi","Nagpur"],3,"At Calcutta (Sept 1920) Congress was convinced of the need for Non-Cooperation, but the final compromise was worked out at the Nagpur session of December 1920."],
+[C1,"Which of the following was NOT part of the initial stage of the Non-Cooperation Movement?",["Surrender of titles given by the government","Boycott of civil services, army, police, courts and legislative councils","Boycott of foreign goods","Full-scale civil disobedience, including refusal to pay taxes"],3,"Gandhiji proposed stages: first surrender of titles and boycott of institutions. Full civil disobedience would be launched only if the government used repression."],
+[C1,"Assertion (A): The Justice Party contested the 1920 council elections.\nReason (R): The non-Brahmans saw the councils as a way to gain some power that normally only Brahmans had access to.",AR,0,"The Justice Party, the party of the non-Brahmans in Madras, felt that entering the councils was one way to gain power. R correctly explains A."],
+[C1,"The Oudh Kisan Sabha, set up in October 1920 against talukdars, was led by:",["Sardar Patel and Mahadev Desai","Alluri Sitaram Raju and Gandhiji","Jawaharlal Nehru, Baba Ramchandra and a few others","Baba Ramchandra and Rajendra Prasad only"],2,"Peasants demanded lower revenue, abolition of begar and social boycott of oppressive landlords. The Kisan Sabha was set up by Jawaharlal Nehru, Baba Ramchandra and others."],
+[C1,"Under the Inland Emigration Act of 1859, plantation workers in Assam:",["Were free to leave after each harvest","Were entitled to land after five years","Could form unions to bargain wages","Could not leave the tea gardens without permission, which was rarely granted"],3,"Hearing of Gandhiji’s call, thousands left the plantations, believing Gandhi Raj was coming. Many were caught and brutally beaten."],
+[C1,"Why did Gandhiji call off the Non-Cooperation Movement in February 1922?",["The government accepted the demand for Swaraj","A mob burnt a police station at Chauri Chaura; he felt satyagrahis needed proper training","The Khilafat issue had been resolved","Congress split at Nagpur"],1,"At Chauri Chaura (Gorakhpur, UP) a peaceful demonstration was fired on, and the crowd attacked and set fire to the police station. Gandhiji felt the movement was turning violent."],
+[C1,"Which statement about the Lahore Congress Session (December 1929) is correct?",["It was held under Gandhiji and accepted dominion status","It was presided by Jawaharlal Nehru and declared Purna Swaraj, with 26 January 1930 as Independence Day","It was held in 1927 to boycott the Simon Commission","It approved the Dandi March under Motilal Nehru"],1,"Under Jawaharlal Nehru, the Congress formally demanded Purna Swaraj and decided 26 January 1930 would be celebrated as Independence Day."],
+[C1,"The Salt March began on 12 March 1930. How many volunteers accompanied Gandhiji, and what was the distance and duration to Dandi?",["50 volunteers, 120 miles, 12 days","78 volunteers, about 240 miles, 24 days","100 volunteers, 300 miles, 30 days","78 volunteers, 240 miles, 12 days"],1,"Gandhiji marched from Sabarmati with 78 volunteers, covering about 240 miles in 24 days. On 6 April he broke the salt law at Dandi."],
+[C1,"Which statement about the Poona Pact (September 1932) is correct?",["It was signed between Gandhiji and Lord Irwin","It gave Depressed Classes separate electorates","It gave Depressed Classes reserved seats in provincial and central councils, voted by the general electorate","It was signed by Ambedkar and Jinnah"],2,"After Gandhiji’s fast unto death, Ambedkar accepted the Poona Pact: reserved seats for Depressed Classes in central and provincial councils, but voted for by the general electorate."],
+[C1,"Which pairing about Bharat Mata is correct?",["Rabindranath Tagore painted Bharat Mata; Bankim wrote Anandamath","Abanindranath Tagore wrote Vande Mataram; Bankim painted Bharat Mata","Bankim Chandra Chattopadhyay wrote Vande Mataram (later in Anandamath); Abanindranath Tagore painted Bharat Mata as a calm, divine figure","Abanindranath Tagore wrote Anandamath; Rabindranath wrote Vande Mataram"],2,"Bankim Chandra wrote Vande Mataram as a hymn to the motherland, later included in Anandamath. Abanindranath Tagore painted the famous Bharat Mata image."],
+[C2,"The Buddhist Diamond Sutra, the oldest Japanese printed book, was printed in:",["AD 768","AD 868","AD 1295","AD 1468"],1,"Buddhist missionaries from China brought print technology to Japan. The Diamond Sutra, printed in AD 868, has six sheets of text and woodcut illustrations."],
+[C2,"Consider: (1) Marco Polo brought woodblock knowledge to Italy in 1295. (2) The Chinese imperial state was for long the major producer of printed material. (3) Civil service exam textbooks were printed in large numbers in China.",["Only 1","1 and 2","2 and 3","1, 2 and 3"],3,"All three are in NCERT: Marco Polo returned from China in 1295 with woodblock print, and the Chinese state printed civil service exam textbooks."],
+[C2,"Which is correct about Johann Gutenberg?",["He invented woodblock printing at Mainz in 1295","He printed 1,800 copies of Luther’s theses in a year","He adapted the olive and wine press to develop printing; the first book was the Bible, about 180 copies in three years","He developed printing in Japan"],2,"Gutenberg grew up in Strasbourg, adapted the olive and wine press, and used metal types. His Bible took three years to print about 180 copies."],
+[C2,"Menocchio, an Italian miller, was executed mainly because:",["He printed Luther’s New Testament","He rejected the Index of Prohibited Books","He was a Protestant missionary","His reading of books led him to reinterpret the Bible, seen as heresy by the Roman Catholic Church"],3,"Menocchio’s reading produced his own ideas about God and creation. The Church began maintaining an Index of Prohibited Books from 1558."],
+[C2,"Which best illustrates the role of print in the Reformation?",["Luther’s Ninety-Five Theses (1517) were hand-copied only","Luther’s New Testament translation sold 5,000 copies within weeks and a second edition came within three months","Gutenberg printed Luther’s Bible","Print was banned in Protestant lands"],1,"Luther’s Ninety-Five Theses (1517) were printed and widely circulated. His New Testament sold 5,000 copies in a few weeks, with a second edition in three months. Print helped fuel the Reformation."],
+[C2,"Which is correct about early printing in India?",["Portuguese missionaries brought the press to Goa in the mid-16th century; Catholic priests printed the first Tamil book at Cochin in 1579","The first Tamil book was printed in 1713 at Goa","Dutch missionaries printed the first Konkani tracts","The press reached India with the British in 1780"],0,"Portuguese missionaries introduced the press to Goa; Jesuits printed Konkani tracts. Catholic priests printed the first Tamil book in 1579 at Cochin, and the first Malayalam in 1713."],
+[C2,"Which statement about the Bengal Gazette is correct?",["It was started by Warren Hastings","It was published in Bombay in 1780","James Augustus Hickey began it in 1780 as a weekly magazine open to all but influenced by none","It was founded by Rammohun Roy in 1821"],2,"Hickey’s Bengal Gazette (1780) was the first newspaper in India. Hickey attacked the Company officials, and Warren Hastings persecuted him."],
+[C2,"Which of the following is correctly matched?",["Sambad Kaumudi – Rammohun Roy (1821)","Samachar Chandrika – Rammohun Roy","Deoband seminary (1867) – Hindu orthodoxy","Gulamgiri – Kashibaba"],0,"Rammohun Roy published Sambad Kaumudi (1821). Hindu orthodoxy published Samachar Chandrika against him. The Deoband seminary (1867) was Muslim; Gulamgiri (1871) was by Jyotiba Phule."],
+[C2,"Rashsundari Debi’s Amar Jiban (1876) is significant because it was:",["The first Hindi novel by a woman","The first full-length autobiography published in Bengali, by a woman who learnt to read in secret","Written by Tarabai Shinde against child marriage","A newspaper banned by the Vernacular Press Act"],1,"Rashsundari Debi, from a conservative family, secretly learnt to read in her kitchen. Amar Jiban was the first full-length autobiography in Bengali."],
+[C2,"Consider the Vernacular Press Act, 1878.",["It was modelled on the Irish Press Laws and passed to control the Indian-language press after the 1857 revolt","It was modelled on German censorship and banned English newspapers","It was modelled on the Irish Press Laws; it gave the government rights to censor reports and editorials in the vernacular press","It was withdrawn in 1878 after Tilak’s trial"],2,"Modelled on the Irish Press Laws, it gave the government extensive rights to censor reports and editorials. A seditious report brought a warning, and repetition led to seizure of the press and machinery."],
+[C2,"Why was Bal Gangadhar Tilak imprisoned in 1908?",["He wrote in Kesari with sympathy about Punjab revolutionaries deported in 1907","He founded the Bengal Gazette","He opposed the Vernacular Press Act in Hindi","He published Gulamgiri"],0,"Tilak’s Kesari reports on the deported Punjab revolutionaries led to his imprisonment in 1908 and widespread protests."],
+[C2,"Chhote Aur Bade Ka Sawal (1938), showing links between caste and class exploitation, was written by:",["Sudarshan Chakr, a Kanpur mill worker","Jyotiba Phule","Kashibaba, a Kanpur mill worker","B. R. Ambedkar"],2,"Kashibaba, a Kanpur mill worker, wrote it. Another Kanpur mill worker, Sudarshan Chakr, wrote poems collected in Sacchi Kavitayan."]
+];
+const Q=RAW.map((r,i)=>({id:i+1,chapter:r[0],question:r[1],optionA:r[2][0],optionB:r[2][1],optionC:r[2][2],optionD:r[2][3],options:r[2],correctOption:"ABCD"[r[3]],correctIndex:r[3],correctAnswer:r[2][r[3]],explanation:r[4],difficulty:"Hard",marks:2}));
+/* ===== APP ===== */
+const KEY="lekisha_exam_v1",TOTAL=Q.length,DUR=40*60*1000;
+const FINAL="U DID SO GREAT! I’M SO PROUD OF YOU! AND BELIEVE ME, UR GONNA KILL IT TOMORROW IN YOUR EXAM! 💗🎀\n\nNo matter what your score is, remember that you tried your best, and that itself is something to be proud of. Keep believing in yourself, Lekisha. YOU’VE GOT THIS! 🧸🍫❤️";
+let S=load(),screen=S&&S.done?"result":(S&&S.endAt?"exam":"home"),tick=null;
+function load(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const BOW=w=>`<svg width="${w}" viewBox="0 0 100 70"><path d="M50 36L33 67 46 60 50 68Z" fill="#ff8fb8" stroke="#e0558a" stroke-width="3" stroke-linejoin="round"/><path d="M50 36L67 67 54 60 50 68Z" fill="#ff8fb8" stroke="#e0558a" stroke-width="3" stroke-linejoin="round"/><path d="M50 35C30 3 1 8 7 35 12 60 36 56 50 35Z" fill="#ffb3d1" stroke="#e0558a" stroke-width="3"/><path d="M50 35C70 3 99 8 93 35 88 60 64 56 50 35Z" fill="#ffb3d1" stroke="#e0558a" stroke-width="3"/><path d="M18 28C24 22 32 24 38 30M82 28C76 22 68 24 62 30" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="50" cy="35" r="9" fill="#e0558a"/></svg>`;
+(function(){const b=document.createElement("div");b.className="bg";["💗","🎀","🍓","🍫","🧸","💖"].forEach((e,i)=>{for(let k=0;k<3;k++){const x=document.createElement("span");x.textContent=e;x.style.left=Math.random()*96+"vw";x.style.animationDuration=14+Math.random()*14+"s";x.style.animationDelay=-Math.random()*20+"s";b.appendChild(x)}});document.body.prepend(b)})();
+const $=id=>document.getElementById(id),app=$("app");
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\n/g,"<br>");
+function go(s){screen=s;render()}
+function start(){S={answers:{},cur:0,endAt:Date.now()+DUR,done:false};save();go("exam")}
+function reset(){S=null;try{localStorage.removeItem(KEY)}catch(e){}go("home")}
+function pick(i){const q=Q[S.cur];if(S.answers[q.id]!==undefined)return;S.answers[q.id]=i;save();render();if(i===q.correctIndex)hearts("🧸","💗")}
+function nav(d){S.cur=Math.max(0,Math.min(TOTAL-1,S.cur+d));save();render()}
+function jump(i){S.cur=i;save();render()}
+function finish(force){const n=TOTAL-Object.keys(S.answers).length;if(!force&&!confirm(n?`You left ${n} question(s) unanswered. Submit exam now?`:"Submit your exam now?"))return;S.done=true;save();clearInterval(tick);go("result")}
+function hearts(a,b){for(let i=0;i<14;i++){const e=document.createElement("div");e.className="fall";e.textContent=i%2?a:b;e.style.left=Math.random()*100+"vw";e.style.animationDuration=2+Math.random()*2+"s";document.body.appendChild(e);setTimeout(()=>e.remove(),4200)}}
+function calc(){let c=0,w=0,c1=0,c2=0;const bad=[];Q.forEach(q=>{const a=S.answers[q.id];if(a===undefined){bad.push(q);return}if(a===q.correctIndex){c++;q.chapter===C1?c1+=2:c2+=2}else{w++;bad.push(q)}});return{c,w,u:TOTAL-c-w,score:c*2,c1,c2,bad}}
+function render(){clearInterval(tick);
+ if(screen==="home")home();else if(screen==="inst")inst();else if(screen==="exam")exam();else result()}
+function home(){app.innerHTML=`<div class="card"><div class="bowbig">${BOW(120)}</div><div class="bear">🧸💗</div><h1>LEKISHA’S PINK EXAM PARADISE 🎀</h1><h1 style="font-size:clamp(24px,6vw,34px)">Hey Lekisha! 💗</h1><p class="sub">Your special SST challenge is waiting for you!</p>
+<div class="stats"><div class="stat">25 Challenging Questions</div><div class="stat">50 Total Marks</div><div class="stat">40 Minutes</div><div class="stat">2 Important History Chapters</div></div>
+<div class="center"><button onclick="go('inst')">START MY EXAM 🎀</button>${S&&S.done?`<p><button class="alt" onclick="go('result')">View my last results 🍫</button></p>`:""}${S&&S.endAt&&!S.done?`<p><button class="alt" onclick="go('exam')">Resume my exam</button></p>`:""}</div></div>`}
+function inst(){app.innerHTML=`<div class="card"><div class="bowbig">${BOW(80)}</div><div class="bear" style="font-size:60px">🍫🧸</div><h1>Before you begin 💗</h1><ul style="line-height:1.9;font-size:17px"><li>25 MCQs: Q1–13 <b>Nationalism in India</b>, Q14–25 <b>Print Culture and the Modern World</b>.</li><li>Each question = 2 marks. Total = 50. Time = 40 minutes.</li><li>No negative marking.</li><li>You see the answer right after you tap an option, and it gets locked.</li><li>The exam auto-submits when the timer hits zero.</li></ul>
+<div class="center"><button class="alt" onclick="go('home')">Back</button> <button onclick="${S&&S.endAt&&!S.done?"go('exam')":"start()"}">I’M READY 🎀</button></div></div>`}
+function exam(){if(!S||S.done){return go(S&&S.done?"result":"home")}
+ const q=Q[S.cur],a=S.answers[q.id],done=Object.keys(S.answers).length;
+ const grid=Q.map((x,i)=>{const v=S.answers[x.id];return `<b class="${v===undefined?"":v===x.correctIndex?"ok":"bad"} ${i===S.cur?"cur":""}" onclick="jump(${i})">${i+1}</b>`}).join("");
+ const opts=q.options.map((o,i)=>{let c="opt";if(a!==undefined){if(i===q.correctIndex)c+=" ok";else if(i===a)c+=" bad";if(i===a)c+=" pick"}
+  return `<button class="${c}" ${a!==undefined?"disabled":""} onclick="pick(${i})"><span class="L">${"ABCD"[i]}</span>${esc(o)}</button>`}).join("");
+ let fb="";if(a!==undefined){const ok=a===q.correctIndex;fb=ok?`<div class="fb ok"><h3><span class="pop">🧸</span> CORRECT! WELL DONE LEKISHA! 💚</h3><p><b>Correct answer:</b> ${"ABCD"[q.correctIndex]}. ${esc(q.correctAnswer)}</p><p>${esc(q.explanation)}</p><b>+2 marks 💗</b></div>`:`<div class="fb bad"><h3>OOPS! NOT QUITE RIGHT! 💗</h3><p><b>Correct answer:</b> ${"ABCD"[q.correctIndex]}. ${esc(q.correctAnswer)}</p><p>${esc(q.explanation)}</p><p>You chose ${"ABCD"[a]}, which is not correct here.</p><b>0 marks</b></div>`}
+ app.innerHTML=`<div class="card"><div class="top"><span>🎀 ${S.cur+1}/${TOTAL}</span><span id="t">⏰ --:--</span></div><div class="bar"><i style="width:${done/TOTAL*100}%"></i></div>
+ <p style="font-size:13px;margin:10px 0 0;color:var(--deep)"><b>${q.chapter}</b> · ${q.difficulty} · ${q.marks} marks</p><h3 style="line-height:1.5">${esc(q.question)}</h3>${opts}${fb}
+ <div class="nav"><button class="alt" ${S.cur===0?"disabled":""} onclick="nav(-1)">← PREVIOUS</button>${S.cur<TOTAL-1?`<button onclick="nav(1)">NEXT QUESTION →</button>`:`<button onclick="finish()">SUBMIT EXAM 🎀</button>`}</div>
+ <div class="grid">${grid}</div><p class="center"><button class="alt" onclick="finish()">Finish exam</button></p></div>`;
+ const t=()=>{const l=S.endAt-Date.now();if(l<=0){clearInterval(tick);alert("Time’s up! Submitting your exam 💗");return finish(true)}const m=Math.floor(l/60000),s=Math.floor(l%60000/1000);const el=$("t");if(el)el.textContent=`⏰ ${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`};t();tick=setInterval(t,1000)}
+function msg(s){return s>=45?"OMG LEKISHA!!! YOU ARE A SUPERSTAR! 💗":s>=35?"AMAZING WORK LEKISHA! YOU DID SO WELL!":s>=25?"GOOD EFFORT! KEEP GOING, YOU’RE GETTING THERE!":"DON’T GIVE UP, LEKISHA! EVERY MISTAKE IS A CHANCE TO LEARN."}
+function result(){if(!S||!S.done)return go("home");const r=calc();
+ const bad=r.bad.map(q=>{const a=S.answers[q.id];return `<div class="mist"><b>Q${q.id}.</b> ${esc(q.question)}<br><br>${a===undefined?"<i>Unanswered</i>":`Your answer: ${"ABCD"[a]}. ${esc(q.options[a])}`}<br><b style="color:var(--gb)">Correct: ${q.correctOption}. ${esc(q.correctAnswer)}</b><br><small>${esc(q.explanation)}</small></div>`}).join("");
+ app.innerHTML=`<div class="card"><div class="bowbig">${BOW(90)}</div><div class="bear" style="font-size:70px">🧸📜</div><h1>LEKISHA’S EXAM RESULTS 🎀</h1><div class="score" id="sc">0 / 50</div><p class="sub"><b>${msg(r.score)}</b></p>
+ <div class="stats"><div class="stat">${(r.score/50*100).toFixed(0)}%<br>Percentage</div><div class="stat">${r.c}<br>Correct</div><div class="stat">${r.w}<br>Wrong</div><div class="stat">${r.u}<br>Unanswered</div><div class="stat">${r.c1} / 26<br>Nationalism in India</div><div class="stat">${r.c2} / 24<br>Print Culture</div></div></div>
+ <div class="card final">${esc(FINAL)}<div class="bear">🧸💗</div></div>
+ <div class="center"><button onclick="document.getElementById('rev').scrollIntoView({behavior:'smooth'})">REVIEW MY MISTAKES 💗</button> <button class="alt" onclick="if(confirm('Start a fresh attempt?'))reset()">TRY AGAIN 🎀</button></div>
+ <div class="card" id="rev" style="margin-top:16px"><h2>Mistakes &amp; unanswered (${r.bad.length})</h2>${bad||"<p>No mistakes at all, perfect score! 💗</p>"}</div>`;
+ let n=0;const el=$("sc"),step=Math.max(1,Math.ceil(r.score/30)),iv=setInterval(()=>{n=Math.min(r.score,n+step);el.textContent=n+" / 50";if(n>=r.score)clearInterval(iv)},40);
+ if(r.score>=35)hearts("🎉","💗")}
+render();
+</script></body></html>
